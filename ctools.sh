@@ -1,3 +1,79 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+#!/data/data/com.termux/files/bin/bash
+clear
+figlet CyberTeam |lolcat
+echo -e "\e[31me
+[!] CyberTeamOfficial
+[!]    Hack Tools\e[0m"
+
+#Ana Bölüm :
+
+echo -e "\e[31m[1] Araçlar\e[0m "
+echo -e "\e[31m[2] Tarayıcılar [ SQL,XSS DAHA FAZLASI ]\e[0m "
+echo -e "\e[31m[3] DDoS Ve DoS Araçları\e[0m"
+echo -e "\e[31m[4] Ping [ Atıcı Ve Bulucu ]\e[0m"
+echo -e "\e[31m[5] IP Takip [ Yer Tespiti,Telefona Sızma, ]\e[0m "
+echo -e "\e[32m[0] Çıkış\e[0m"
+echo ""
+echo ""
+read -p "Root@CyberTeam > " sayi;
+
+if [ $sayi = 1 ] || [ $sayi = 01 ]
+then
+echo -e "\e[31m[A1]WP Config Çekme\e[0m"
+echo -e "\e[31m[A2]WebSite Sayfa Çekme\e[0m"
+echo -e "\e[31m[A3]Web Site Whois Çekme\e[0m"
+echo -e "\e[31m[A4]Geri Dön\e[0m"
+read -p "Root@Araçlar > " to;
+
+if [ $to = A4 ] || [ $to = a4 ]
+then
+
+cd ayar/arayuz/
+bash index.sh
+fi
+
+if [ $to = A2 ] || [ $to = a2 ]
+then
+echo ""
+echo ""
+echo -e "\e[32mKullanım : Eyer WebSitenin Belirli bir kısmını aratmak
+istiyorsanız http://website.com/belirlibirkısım.php olarak aratın\e[0m"
+echo
+read -p "Web Site URL > " code;
+echo ""
+sleep 2
+echo "Önizmleme Çekiliyor..."
+sleep5
+clear
+curl $code
+fi
+
+if [ $to = A1 ] || [ $to = a1 ]
+then
+echo ""
+echo ""
+read -p "Web Site > " wurl
+echo ""
+read -p "Web Site Port > " wport
+echo
+echo "$wurl:$wport"
+echo
+echo "$wurl/wp/admin/wp-themes/wp-config.php"
+echo "Kaynaklar Getiriliyor..."
+sleep 2
+echo -e "\e[32m
+--------------------------
+Database İnfo
+
+MySQL Username : cyber_db
+MySQL Password : cyber0
+MySQL Port     : 80
+
+--------------------------
+Admin İnfo
+
 Admin Username : cadmin
 Admin Password : ca123ca
 Admin IP       : 127.0.0.1
